@@ -1,10 +1,33 @@
 .cardContainer{
-    display: flex;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
-            margin-top: 200px;
+display: flex;
+justify-content: center;
+align-items:center;
+height: 100vh;
+
+}
+.card-img-top{
+    display: block;
+    width:80%;
+    height:auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+.card-img-bottom{
+    display: block;
+    width:200px;
+    height:auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 4px;
 }
 .card{
-    box-shadow:red;
+    
+        border: 1px solid beige;
+        border-radius: 10px;
+        width: 400px;
+        
+}
+.card-title{
+    margin-left: 40px;
 }
