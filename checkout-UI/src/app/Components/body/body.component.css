@@ -1,0 +1,10 @@
+.expansion-panel-container {
+    max-width: 80%; /* Set your desired width */
+    margin: 0 auto; /* Center the container */
+  }
+  
+
+  .custom-expansion-panel {
+    border-radius: 8px; /* Adjust the radius as needed */
+    overflow: hidden; /* Ensure content respects the border radius */
+  }
