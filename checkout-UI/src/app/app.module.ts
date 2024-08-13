@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { BodyComponent } from './Components/body/body.component';
 
 import { FrameComponent } from './Components/frame/frame.component';
-import { MatExpansionModule } from '@angular/material/expansion';
+
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatExpansionModule
+    
   ],
   providers: [
     provideClientHydration()
