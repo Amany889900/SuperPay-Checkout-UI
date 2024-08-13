@@ -8,3 +8,13 @@
     border-radius: 8px; /* Adjust the radius as needed */
     overflow: hidden; /* Ensure content respects the border radius */
   }
+
+  .bi-credit-card{
+    margin-right: 15px;
+  }
+  .bi-bank{
+    margin-right: 15px;
+  }
+  .bi-card-heading{
+    margin-right: 15px;
+  }
