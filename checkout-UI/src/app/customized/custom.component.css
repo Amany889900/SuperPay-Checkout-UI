@@ -1,0 +1,31 @@
+.expansion-panel {
+    border: 1px solid #ccc;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .panel-header {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  
+  .panel-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .panel-content.expanded {
+    max-height: 200px; /* Adjust based on your content */
+  }
+
+  .arrow {
+    transition: transform 0.3s ease;
+    margin-left: 10px;
+  }
+  
+  .arrow.expanded {
+    transform: rotate(180deg);
+  }
