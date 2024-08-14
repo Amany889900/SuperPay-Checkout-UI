@@ -18,10 +18,12 @@
   }
   
   .panel-content.expanded {
-    max-height: 200px; /* Adjust based on your content */
+    max-height: 200px; 
   }
 
   .arrow {
+    display: inline-block;
+    transform: rotate(0deg);
     transition: transform 0.3s ease;
     margin-left: 10px;
   }
