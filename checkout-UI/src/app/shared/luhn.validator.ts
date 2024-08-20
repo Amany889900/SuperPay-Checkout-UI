@@ -1,6 +1,6 @@
-import { AbstractControl, ValidationErrors } from '@angular/forms';
+import { AbstractControl} from '@angular/forms';
 
-export function luhnValidator(control: AbstractControl): {{}} | null {
+export function luhnValidator(control: AbstractControl):{[key:string]:boolean} | null {
   const value = control.value.replace(/\s+/g, ''); // Remove spaces
  
 
