@@ -1,10 +1,8 @@
 import { AbstractControl, ValidationErrors } from '@angular/forms';
 
-export function luhnValidator(control: AbstractControl): ValidationErrors | null {
+export function luhnValidator(control: AbstractControl): {{}} | null {
   const value = control.value.replace(/\s+/g, ''); // Remove spaces
-  if (!/^\d+$/.test(value)) {
-    return { luhn: true }; // Invalid if not numeric
-  }
+ 
 
   let sum = 0;
   let shouldDouble = false;
