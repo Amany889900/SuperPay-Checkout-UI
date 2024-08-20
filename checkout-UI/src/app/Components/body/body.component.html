@@ -1,47 +1,37 @@
 <form [formGroup]="registrationForm">
+<!--EMAIL-->
+  <div class="form-group mb-3">
+    <label>Email*</label>
+    <input [class.is-invalid]="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched " type="email" class="form-control" formControlName="email">
+    <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched">
+  <small class="text-danger" *ngIf="registrationForm.get('email')?.errors?.['required']">Email is required</small>
+  <small class="text-danger" *ngIf="registrationForm.get('email')?.errors?.['email']">Please enter a valid email</small>
+  </div>
+  </div>
+<!--AGE-->
+  <div class="form-group mb-3">
+    <label>Age</label>
+    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '');" class="form-control" formControlName="age">
 
+  </div>
+<!--CARDNUMBER-->
   <div class="form-group mb-3">
-    <label>Username</label>
-    <input [class.is-invalid]="registrationForm.get('userName')?.invalid && registrationForm.get('userName')?.touched " type="text" class="form-control" formControlName="userName">
-    <!-- <small [class.d-none]="registrationForm.get('userName')?.valid || registrationForm.get('userName')?.untouched" class="text-danger">Username is required</small> -->
-    <div *ngIf="registrationForm.get('userName')?.invalid && registrationForm.get('userName')?.touched">
-  <small class="text-danger" *ngIf="registrationForm.get('userName')?.errors?.['required']">Username is required</small>
-  <small class="text-danger" *ngIf="registrationForm.get('userName')?.errors?.['minlength']">Username must be at least 3 characters</small>
-  <small class="text-danger" *ngIf="registrationForm.get('userName')?.errors?.['forbiddenName']">{{registrationForm.get('userName')?.errors?.['forbiddenName'].value}} Username is not allowed</small>
-  </div>
+    <label>Card Number</label>
+    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(.{4})/g, '$1 ')" class="form-control" formControlName="cardNum" placeholder="XXXX-XXXX-XXXX-XXXX">
+    <div *ngIf="registrationForm.get('cardNum')?.invalid && registrationForm.get('cardNum')?.touched">
+      <small class="text-danger" *ngIf="registrationForm.get('cardNum')?.errors?.['luhn']">Please enter a valid card number</small>
+      
+      </div>
   </div>
   
-  <div class="form-group mb-3">
-    <label>Password</label>
-    <input [class.is-invalid]= "registrationForm.errors?.['misMatch']" type="password" class="form-control" formControlName="password">
-    <small class="text-danger" *ngIf="registrationForm.errors?.['misMatch']">Passwords do not much</small>
-  </div>
+<!--EXPIRYNUMBER-->
+<div class="form-group mb-3">
+  <label>Expiry Date</label>
+  <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/^(\d{2})(?=\d)/, '$1/'); "  class="form-control" formControlName="expDate" placeholder="mm/yy">
+</div>
   
-  <div class="form-group mb-3">
-    <label>Confirm Password</label>
-    <input type="password" class="form-control" formControlName="confirmPassword">
-  </div>
-  
-  <div formGroupName="address">
-    <div class="form-group mb-3">
-       <label>City</label>
-       <input type="text" class="form-control" formControlName="city">
-    </div>
-  
-    <div class="form-group mb-3">
-      <label>State</label>
-       <input type="text" class="form-control" formControlName="state">
-    </div>
-  
-    <div class="form-group mb-3">
-      <label>Postal Code</label>
-       <input type="text" class="form-control" formControlName="postalCode">
-    </div>
-  
-  </div>
-  
-   <button class="btn btn-primary mb-3" type="submit">Register</button>
-   <button (click)="loadApiData()" class="btn btn-secondary mb-3 ms-2" type="button">Load API Data</button>
+   <button class="btn btn-primary mb-3" type="submit">Submit</button>
+   
   
   
   </form>
