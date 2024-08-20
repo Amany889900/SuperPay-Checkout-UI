@@ -14,7 +14,7 @@ export class BodyComponent {
     this.registrationForm = this.fb.group({
       email: ['', [Validators.required,Validators.email]],
       age: ['',],
-      cardNum: ['',luhnValidator],
+      cardNum: ['',[Validators.required,luhnValidator]],
       expDate: ['',],
     });
   }

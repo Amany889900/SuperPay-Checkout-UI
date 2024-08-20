@@ -16,11 +16,10 @@
   </div>
 <!--CARDNUMBER-->
   <div class="form-group mb-3">
-    <label>Card Number</label>
+    <label>Card Number*</label>
     <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(.{4})/g, '$1 ')" class="form-control" formControlName="cardNum" placeholder="XXXX-XXXX-XXXX-XXXX">
     <div *ngIf="registrationForm.get('cardNum')?.invalid && registrationForm.get('cardNum')?.touched">
-      <small class="text-danger" *ngIf="registrationForm.get('cardNum')?.errors?.['luhn']">Please enter a valid card number</small>
-      
+      <small class="text-danger" *ngIf="registrationForm.get('cardNum')?.errors?.['required']">The card number is required</small>
       </div>
   </div>
   
@@ -32,6 +31,4 @@
   
    <button class="btn btn-primary mb-3" type="submit">Submit</button>
    
-  
-  
   </form>
