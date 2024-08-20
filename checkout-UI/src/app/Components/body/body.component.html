@@ -10,9 +10,12 @@
   </div>
 <!--AGE-->
   <div class="form-group mb-3">
-    <label>Age</label>
+    <label>Age*</label>
     <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '');" class="form-control" formControlName="age">
-
+    <div *ngIf="registrationForm.get('age')?.invalid && registrationForm.get('age')?.touched">
+      <small class="text-danger" *ngIf="registrationForm.get('age')?.errors?.['required']">Age is required</small>
+      <small class="text-danger" *ngIf="registrationForm.get('age')?.errors?.['underAge']">Age must be at least 16</small>
+    </div>
   </div>
 <!--CARDNUMBER-->
   <div class="form-group mb-3">
@@ -26,10 +29,11 @@
   
 <!--EXPIRYNUMBER-->
 <div class="form-group mb-3">
-  <label>Expiry Date</label>
+  <label>Expiry Date*</label>
   <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/^(\d{2})(?=\d)/, '$1/'); "  class="form-control" formControlName="expDate" placeholder="mm/yy">
   <div *ngIf="registrationForm.get('expDate')?.invalid && registrationForm.get('expDate')?.touched">
-    <small class="text-danger" *ngIf="registrationForm.get('expDate')?.errors?.['expired']">Please enter a valid date</small>
+    <small class="text-danger" *ngIf="registrationForm.get('expDate')?.errors?.['required']">The Expiry date is required</small>
+    <small class="text-danger" *ngIf="registrationForm.get('expDate')?.errors?.['isExp']">Please enter a valid date</small>
   </div>
 </div>
   

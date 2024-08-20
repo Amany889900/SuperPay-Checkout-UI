@@ -1,14 +1,16 @@
 import { AbstractControl} from '@angular/forms';
 
 export function luhnValidator(control: AbstractControl):{[key:string]:boolean} | null {
-  const value = control.value.replace(/\s+/g, ''); // Remove spaces
  
-
   let sum = 0;
   let shouldDouble = false;
 
-  for (let i = value.length - 1; i >= 0; i--) {
-    let digit = parseInt(value.charAt(i), 10);
+  for (let i = control.value.length - 1; i >= 0; i--) {
+    let digit = parseInt(control.value.charAt(i), 10);
+
+    if (isNaN(digit)) {
+        continue;
+      }
 
     if (shouldDouble) {
       digit *= 2;
