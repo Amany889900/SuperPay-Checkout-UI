@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-custom',
@@ -6,8 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './custom.component.css'
 })
 export class CustomComponent {
+  @Input() header: string;
+  @Input() content: string;
+
   isExpanded = false;
 
+  
   togglePanel() {
     this.isExpanded = !this.isExpanded;
   }

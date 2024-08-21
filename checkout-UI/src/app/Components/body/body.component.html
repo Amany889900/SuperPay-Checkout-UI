@@ -1,35 +1,6 @@
-<div class="expansion-panel-container">
-<mat-accordion>
-    <mat-expansion-panel class="custom-expansion-panel">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-         <i class="bi bi-credit-card"></i> 
-            Pay With Debit/Credit Card
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <p>Content 1</p>
-    </mat-expansion-panel>
-    <br>
-    <mat-expansion-panel class="custom-expansion-panel">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-        <i class="bi bi-bank"></i>
-          Buy Now Pay Later
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <p>Content 2</p>
-    </mat-expansion-panel>
-    <br>
-    <mat-expansion-panel class="custom-expansion-panel">
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            <i class="bi bi-card-heading"></i>
-            Bank Installment
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Content 3</p>
-      </mat-expansion-panel>
-  </mat-accordion>
-  <!-- <app-custom></app-custom> -->
-  </div>
+<app-custom
+*ngFor="let panel of panels"
+[header]="panel.header"
+[content]="panel.content">
+</app-custom>
   
