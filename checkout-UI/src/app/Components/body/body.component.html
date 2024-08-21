@@ -1,5 +1,6 @@
-<app-custom title="Panel 1" content="content One">
-  
+<div *ngFor="let item of items">
+<app-custom header="{{item.title}}" content="{{item.content}}">
 </app-custom>
+</div>
 
   
