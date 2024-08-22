@@ -1,20 +1,4 @@
-.expansion-panel-container {
-    max-width: 80%; /* Set your desired width */
-    margin: 0 auto; /* Center the container */
-  }
-  
-
-  .custom-expansion-panel {
-    border-radius: 8px; /* Adjust the radius as needed */
-    overflow: hidden; /* Ensure content respects the border radius */
-  }
-
-  .bi-credit-card{
-    margin-right: 15px;
-  }
-  .bi-bank{
-    margin-right: 15px;
-  }
-  .bi-card-heading{
-    margin-right: 15px;
-  }
+.expContainer{
+  padding-left: 40px;
+  padding-right: 40px;
+}

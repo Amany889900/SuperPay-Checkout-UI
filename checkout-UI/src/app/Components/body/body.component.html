@@ -1,5 +1,6 @@
-<div *ngFor="let item of items">
-<app-custom header="{{item.title}}" content="{{item.content}}">
+<div *ngFor="let item of items; let i = index" class="expContainer" class="expContainer">
+<app-custom header="{{item.title}}" content="{{item.content}}" icon="{{item.icon}}" [isExpanded]="expandedIndex === i" 
+    (toggleEvent)="onToggle(i)">
 </app-custom>
 </div>
 

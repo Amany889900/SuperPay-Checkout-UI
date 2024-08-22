@@ -1,7 +1,8 @@
 <div class="expansion-panel" (click)="togglePanel()">
   <div class="panel-header">
+    <i class="{{icon}}"></i>
     <span>{{header}}</span>
-    <span class="arrow" [ngClass]="{'expanded': isExpanded}">&#9660;</span>
+    <span class="arrow" [ngClass]="{'expanded': isExpanded}"><i class="bi bi-chevron-down"></i></span>
   </div>
  
   <div class="panel-content" [ngClass]="{'expanded': isExpanded}">
