@@ -9,7 +9,7 @@ import { item } from '../../Models/item';
 export class BodyComponent {
   items:item[];
 
-  expandedIndex: number | null = null; // This property tracks the currently expanded item
+  expandedIndex: number | null = null; 
 
   constructor(){
     this.items=[{title:'Pay With Credit/Debit Card',content:'content 1',icon:"bi bi-credit-card",id:1},

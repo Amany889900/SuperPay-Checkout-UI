@@ -9,10 +9,10 @@ export class CustomComponent {
   @Input() header: string='';
   @Input() content: string='';
   @Input() icon: any='';
-  @Input() isExpanded: boolean = false; // This property is passed from the parent component
+  @Input() isExpanded: boolean = false; 
   @Output() toggleEvent = new EventEmitter<void>();
 
   togglePanel() {
-    this.toggleEvent.emit(); // Emit the event when the panel is toggled
+    this.toggleEvent.emit(); 
   }
 }
