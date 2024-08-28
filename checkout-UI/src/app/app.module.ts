@@ -11,6 +11,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatExpansionModule } from '@angular/material/expansion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomComponent } from './customized/custom.component';
+import { HttpClient} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { CustomComponent } from './customized/custom.component';
     BrowserModule,
     AppRoutingModule,
     MatExpansionModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    
   ],
   providers: [
     provideClientHydration(),
@@ -32,4 +35,5 @@ import { CustomComponent } from './customized/custom.component';
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
