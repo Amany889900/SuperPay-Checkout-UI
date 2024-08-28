@@ -1,13 +1,13 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ApiService } from '../api.service';
+import { ApiService } from '../api.service'
 @Component({
   selector: 'app-custom',
   templateUrl: './custom.component.html',
   styleUrl: './custom.component.css'
 })
 export class CustomComponent {
-  constructor(private httpClient: HttpClient){}
+  
 
   @Input() header: string='';
   @Input() content: string='';
@@ -20,8 +20,5 @@ export class CustomComponent {
 
   togglePanel() {
     this.toggleEvent.emit(); 
-    
-  }
-
- 
+}
 }
