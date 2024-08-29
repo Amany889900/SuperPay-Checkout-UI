@@ -11,6 +11,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomComponent } from './Components/customized/custom.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { CustomComponent } from './Components/customized/custom.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule, 
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(),
