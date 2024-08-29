@@ -1,6 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { ApiService } from '../api.service'
+
 @Component({
   selector: 'app-custom',
   templateUrl: './custom.component.html',
@@ -16,9 +15,9 @@ export class CustomComponent {
   @Output() toggleEvent = new EventEmitter<void>();
 
 
-
-
   togglePanel() {
-    this.toggleEvent.emit(); 
+    this.toggleEvent.emit();   
 }
+
 }
+
