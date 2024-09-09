@@ -14,11 +14,13 @@ export class BodyComponent {
 
   constructor(private fb: FormBuilder) {
     this.registrationForm = this.fb.group({
-      email: ['', [Validators.required,Validators.email]],
-      age: ['',[Validators.required,ageValid]],
-      cardNum: ['',[Validators.required,luhnValidator]],
-      expDate: ['',[Validators.required,expired]],
+      username: ['', [Validators.required]],
+      password: ['',[Validators.required]]
     });
+  }
+
+  login(){
+    
   }
   
 
