@@ -8,9 +8,9 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   
-  private apiUrl = 'https://localhost:3000';
+  private apiUrl = 'http://localhost:3000';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   login(username: string, password: string): Observable<any>{
     return this.http.post(`${this.apiUrl}/login`, { username, password });
