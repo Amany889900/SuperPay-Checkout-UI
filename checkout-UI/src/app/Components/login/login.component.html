@@ -19,8 +19,10 @@
                 </div>
               </div>
             
-              
-               <button class="btn btn-primary mb-3" type="submit" [disabled]="loginForm.get('username')?.invalid || loginForm.get('password')?.invalid" onclick="login()">Login</button>
+              <p *ngIf="loginForm.invalid">Form is invalid</p>
+              <p *ngIf="loginForm.valid">Form is valid</p>
+
+               <button class="btn btn-primary mb-3" type="submit" [disabled]="loginForm.invalid">Login</button>
                
               </form>
     </div>

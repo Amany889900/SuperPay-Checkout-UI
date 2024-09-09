@@ -10,9 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent { 
   loginForm: FormGroup;
-  username: string = '';
-  password: string = '';
-
+  
   constructor(private fb: FormBuilder, private apiService: ApiService, private router: Router) {
     this.loginForm = this.fb.group({
       username: ['', [Validators.required]],
