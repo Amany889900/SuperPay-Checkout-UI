@@ -1,0 +1,33 @@
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    
+    }
+    .card-img-top{
+        display: block;
+        width:80%;
+        height:auto;
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 4px;
+    }
+    .card-img-bottom{
+        display: block;
+        width:200px;
+        height:auto;
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 4px;
+    }
+    .card{
+        
+            border: 1px solid rgb(74, 175, 200);
+            border-radius: 10px;
+            width: 400px;
+            
+    }
+    .card-title{
+        font-size: 20px;
+    }
