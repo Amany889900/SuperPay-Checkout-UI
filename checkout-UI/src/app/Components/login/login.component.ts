@@ -14,19 +14,20 @@ export class LoginComponent {
   
   constructor(private fb: FormBuilder, private apiService: ApiService, private router: Router, private http: HttpClient) {
     this.loginForm = this.fb.group({
-      username: ['', [Validators.required]],
+      email: ['', [Validators.required]],
       password: ['',[Validators.required]]
     });
   } 
 
   onLogin(): void {
     if (this.loginForm.valid) {
-      const { username, password } = this.loginForm.value;
-      this.apiService.login(username, password).subscribe(response => {
+      const { email, password } = this.loginForm.value;
+      this.apiService.login(email, password).subscribe(response => {
         if (response.success) {
+          alert('Successful Login');
           this.router.navigate(['/dashboard']);
         } else {
-          alert('Login failed');
+          alert('Invalid Credentials');
         }
       });
     }
